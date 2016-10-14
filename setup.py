@@ -3,12 +3,12 @@ from distutils.core import setup
 
 setup(
     name='ovp-core',
-    version='0.1.0',
+    version='0.1.1',
     author=u'Atados',
     author_email='arroyo@atados.com.br',
     packages=['ovp_core'],
     url='https://github.com/OpenVolunteeringPlatform/django-ovp-core',
-    download_url = 'https://github.com/OpenVolunteeringPlatform/django-ovp-core/tarball/0.1.0',
+    download_url = 'https://github.com/OpenVolunteeringPlatform/django-ovp-core/tarball/0.1.1',
     license='AGPL',
     description='This module has core functionality for' + \
                 ' ovp projects, such as creation, editing' + \
