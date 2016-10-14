@@ -2,7 +2,7 @@
 OVP Core
 ==========
 
-.. image:: https://app.codeship.com/core//status?branch=master
+.. image:: https://app.codeship.com/projects/38278120-748d-0134-a972-3a52ed362f75/status?branch=master
 .. image:: https://codecov.io/gh/OpenVolunteeringPlatform/django-ovp-core/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/OpenVolunteeringPlatform/django-ovp-core
 
