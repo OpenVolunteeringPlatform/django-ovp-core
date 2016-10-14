@@ -10,3 +10,4 @@ v0.1.0
 v0.1.1[unreleased]
 -----------
 * Add codeship and codecov badge
+* Add pypi badge
