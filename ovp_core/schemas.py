@@ -25,7 +25,7 @@ class OVPSchemaGenerator(schemas.SchemaGenerator):
               view.request = schemas.clone_request(request, method)
               try:
                   view.check_permissions(view.request)
-              except exceptions.APIException:
+              except schemas.exceptions.APIException:
                   continue
           else:
               view.request = None
