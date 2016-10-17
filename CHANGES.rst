@@ -13,5 +13,9 @@ v0.1.1
 * Add pypi badge
 * Add OvpSchemaGenerator, which fixes multiple methods on @list_route or @detail_route
 
-v0.1.2[unreleased]
+v0.1.2
+-----------
+* Fix schema exception
+
+v0.1.3[unreleased]
 -----------
