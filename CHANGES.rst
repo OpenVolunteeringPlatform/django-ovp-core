@@ -22,6 +22,10 @@ v0.1.3
 * Add address model
 * Add skills and causes
 
-v0.1.4[unreleased]
+v0.1.4
+----------
+* Create GoogleAddressSerializer
+
+v0.1.5[unreleased]
 -----------
 * [TODO] Improve address tests and coverage
