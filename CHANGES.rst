@@ -17,9 +17,10 @@ v0.1.2
 -----------
 * Fix schema exception
 
-v0.1.3[unreleased]
+v0.1.3
 -----------
 * Add address model
+* Add skills and causes
 
 v0.1.4[unreleased]
 -----------
