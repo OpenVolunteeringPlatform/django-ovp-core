@@ -11,7 +11,7 @@ class AddressComponentType(models.Model):
   name = models.CharField(max_length=100)
 
   def __str__(self):
-    return u"{}".format(self.name)
+    return self.name
 
 class AddressComponent(models.Model):
   long_name = models.CharField(max_length=400)
@@ -19,7 +19,7 @@ class AddressComponent(models.Model):
   types = models.ManyToManyField(AddressComponentType)
 
   def __str__(self):
-    return u"{}".format(self.long_name)
+    return self.long_name
 
 class GoogleRegion(models.Model):
   region_name = models.CharField(max_length=400)
@@ -95,11 +95,11 @@ def update_address(sender, instance, **kwargs):
   #r = requests.get('https://maps.googleapis.com/maps/api/geocode/json?latlng={}%20{}'.format(instance.lat, instance.lng))
   addressline = instance.typed_address
 
-  url = u'https://maps.googleapis.com/maps/api/geocode/json?language=pt_BR&address={}'.format(addressline)
+  url = 'https://maps.googleapis.com/maps/api/geocode/json?language=pt_BR&address={}'.format(addressline)
 
   key = os.environ.get('GOOGLE_MAPS_KEY', None)
   if key:
-    url = u'{}&key={}'.format(url, key)
+    url = '{}&key={}'.format(url, key)
 
   r = requests.get(url)
   data = r.json()
