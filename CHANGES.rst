@@ -20,3 +20,7 @@ v0.1.2
 v0.1.3[unreleased]
 -----------
 * Add address model
+
+v0.1.4[unreleased]
+-----------
+* [TODO] Improve address tests and coverage
