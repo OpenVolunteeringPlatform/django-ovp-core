@@ -66,27 +66,27 @@ class GoogleAddress(models.Model):
     # Build address string
     string_address = ''
     if 'route' in address and isinstance(address['route'], dict):
-      string_address += '{}, '.format(address['route']['long_name'].encode('utf8'))
+      string_address += '{}, '.format(address['route']['long_name'])
     if 'route' in address and isinstance(address['street_number'], dict):
-      string_address += '{}, '.format(address['street_number']['long_name'].encode('utf8'))
+      string_address += '{}, '.format(address['street_number']['long_name'])
     if 'sublocality_level_1' in address and isinstance(address['sublocality_level_1'], dict):
-      string_address += '{}, '.format(address['sublocality_level_1']['long_name'].encode('utf8'))
+      string_address += '{}, '.format(address['sublocality_level_1']['long_name'])
     if 'administrative_area_level_2' in address and isinstance(address['administrative_area_level_2'], dict):
-      string_address += '{}, '.format(address['administrative_area_level_2']['long_name'].encode('utf8'))
+      string_address += '{}, '.format(address['administrative_area_level_2']['long_name'])
     if 'administrative_area_level_1' in address and isinstance(address['administrative_area_level_1'], dict):
-      string_address += '{}, '.format(address['administrative_area_level_1']['short_name'].encode('utf8'))
+      string_address += '{}, '.format(address['administrative_area_level_1']['short_name'])
     if 'country' in address and isinstance(address['country'], dict):
-      string_address += '{}, '.format(address['country']['long_name'].encode('utf8'))
+      string_address += '{}, '.format(address['country']['long_name'])
 
     string_address = string_address.strip().strip(',')
 
     return string_address
 
 
-  def __unicode__(self):
+  def __str__(self):
     if self.address_line:
       return self.address_line
-    return u""
+    return ""
 
 
 @receiver(post_save, sender=GoogleAddress)
@@ -94,9 +94,6 @@ def update_address(sender, instance, **kwargs):
   # Query lat and lng at google
   #r = requests.get('https://maps.googleapis.com/maps/api/geocode/json?latlng={}%20{}'.format(instance.lat, instance.lng))
   addressline = instance.typed_address
-
-  if isinstance(addressline, str):
-    addressline = unicode(addressline, 'utf-8')
 
   url = u'https://maps.googleapis.com/maps/api/geocode/json?language=pt_BR&address={}'.format(addressline)
 
