@@ -32,4 +32,5 @@ v0.1.5
 
 v0.1.6[unreleased]
 -----------
+* [TODO] Upload v0.1.5 to PYPI(got error 500 at this moment)
 * [TODO] Improve address tests and coverage
