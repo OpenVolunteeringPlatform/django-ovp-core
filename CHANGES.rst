@@ -26,6 +26,10 @@ v0.1.4
 ----------
 * Create GoogleAddressSerializer
 
-v0.1.5[unreleased]
+v0.1.5
+-----------
+* Add address validator
+
+v0.1.6[unreleased]
 -----------
 * [TODO] Improve address tests and coverage
