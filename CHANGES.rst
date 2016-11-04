@@ -30,7 +30,11 @@ v0.1.5
 -----------
 * Add address validator
 
-v0.1.6[unreleased]
+v0.1.6
+-----------
+* Move BaseMail from ovp-users to ovp-core
+
+v0.1.7[unreleased]
 -----------
 * [TODO] Upload v0.1.5 to PYPI(got error 500 at this moment)
 * [TODO] Improve address tests and coverage
