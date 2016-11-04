@@ -33,6 +33,7 @@ v0.1.5
 v0.1.6
 -----------
 * Move BaseMail from ovp-users to ovp-core
+* Introduce empty base email
 
 v0.1.7[unreleased]
 -----------
