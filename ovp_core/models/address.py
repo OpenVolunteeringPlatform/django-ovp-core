@@ -98,7 +98,7 @@ def update_address(sender, instance, **kwargs):
   url = 'https://maps.googleapis.com/maps/api/geocode/json?language=pt_BR&address={}'.format(addressline)
 
   key = os.environ.get('GOOGLE_MAPS_KEY', None)
-  if key:
+  if key: #pragma: no cover
     url = '{}&key={}'.format(url, key)
 
   r = requests.get(url)
@@ -142,7 +142,7 @@ def update_address(sender, instance, **kwargs):
     try:
       if data['results'][0]['geometry']:
         GoogleAddress.objects.filter(pk=instance.pk).update(lat=data['results'][0]['geometry']['location']['lat'], lng=data['results'][0]['geometry']['location']['lng'])
-    except:
+    except: #pragma: no cover
       pass
 
     # Using update to avoid post_save signal
