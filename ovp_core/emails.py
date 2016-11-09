@@ -20,8 +20,8 @@ class BaseMail:
   """
   from_email = ''
 
-  def __init__(self, user, async_mail=None):
-    self.user = user
+  def __init__(self, email_address, async_mail=None):
+    self.email_address = email_address
     self.async_mail = async_mail
 
   def sendEmail(self, template_name, subject, context):
@@ -29,7 +29,7 @@ class BaseMail:
     text_content = get_template('email/{}.txt'.format(template_name)).render(ctx)
     html_content = get_template('email/{}.html'.format(template_name)).render(ctx)
 
-    msg = EmailMultiAlternatives(subject, text_content, self.from_email, [self.user.email])
+    msg = EmailMultiAlternatives(subject, text_content, self.from_email, [self.email_address])
     msg.attach_alternative(text_content, "text/plain")
     msg.attach_alternative(html_content, "text/html")
 
