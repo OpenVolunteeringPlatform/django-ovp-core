@@ -37,7 +37,8 @@ v0.1.6
 * Improve address tests and coverage
 * Alter get_city_state() order
 
-v0.1.7[unreleased]
+v1.0.0
 -----------
 * Add tests for email module(BaseMail and EmailThread classes)
-* Test OVPSchemaGenerator
+* Add test for OVPSchemaGenerator
+* Add test for address_validate 
