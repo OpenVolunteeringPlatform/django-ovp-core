@@ -34,8 +34,8 @@ v0.1.6
 -----------
 * Move BaseMail from ovp-users to ovp-core
 * Introduce empty base email
+* Improve address tests and coverage
+* Alter get_city_state() order
 
 v0.1.7[unreleased]
 -----------
-* [TODO] Upload v0.1.5 to PYPI(got error 500 at this moment)
-* [TODO] Improve address tests and coverage
