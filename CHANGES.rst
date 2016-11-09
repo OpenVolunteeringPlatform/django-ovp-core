@@ -46,3 +46,7 @@ v1.0.0
 v1.0.1
 -----------
 * Replace distutils with setuptools
+
+v1.0.2
+-----------
+* Add .egg-info to .gitignore
