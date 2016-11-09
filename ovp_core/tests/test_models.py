@@ -6,6 +6,15 @@ from ovp_core.models import AddressComponentType
 from ovp_core.models import Skill
 from ovp_core.models import Cause
 
+def remove_component(address, types):
+  for component in address.address_components.all():
+    for type in component.types.all():
+      if type.name in types:
+        component.delete()
+
+  return address
+
+
 class GoogleAddressModelTestCase(TestCase):
   def test_api_call(self):
     """Assert GoogleAddress calls google API and get address"""
@@ -20,8 +29,33 @@ class GoogleAddressModelTestCase(TestCase):
     self.assertTrue(a.lat)
     self.assertTrue(a.lng)
 
+    a.typed_address="Rua Capote Valente, 701, SP"
+    a.save()
+    a = GoogleAddress.objects.get(pk=a.pk)
+    self.assertTrue(a.typed_address == "Rua Capote Valente, 701, SP")
+    self.assertTrue(a.typed_address2 == "Casa")
+    self.assertTrue(a.address_line == "Rua Capote Valente, 701, Pinheiros, São Paulo, SP, Brasil")
+    self.assertTrue(a.__str__()  == "Rua Capote Valente, 701, Pinheiros, São Paulo, SP, Brasil")
+    self.assertTrue(a.lat)
+    self.assertTrue(a.lng)
+
     a.address_line=None
     self.assertTrue(a.__str__() == "")
+
+  def test_locality(self):
+    """Assert GoogleAddressModel.get_city_state preference order is locality, administrative_area_2, sublocality"""
+    a = GoogleAddress(typed_address="Chicago")
+    a.save()
+    self.assertTrue("Chicago" in a.get_city_state())
+
+    a = remove_component(a, ['locality'])
+    self.assertTrue("Cook" in a.get_city_state())
+
+    a = GoogleAddress(typed_address="Sarchnar")
+    a.save()
+    a = remove_component(a, ['locality', 'administrative_area_level_2'])
+    self.assertTrue("Rahimawa" in a.get_city_state())
+
 
 class AddressComponentTypeModelTestCase(TestCase):
   def test_str_call(self):
