@@ -20,7 +20,7 @@ def load_data(apps, schema_editor):
     c = Cause(name=cause)
     c.save()
 
-def unload_data(apps, schema_editor):
+def unload_data(apps, schema_editor): #pragma: no cover
   Skill = apps.get_model("ovp_core", "Skill")
   Cause = apps.get_model("ovp_core", "Cause")
 
