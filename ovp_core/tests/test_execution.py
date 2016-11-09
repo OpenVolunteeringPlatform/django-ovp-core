@@ -6,6 +6,7 @@ from ovp_core.schemas import OVPSchemaGenerator
 # Just import to test execution
 from ovp_core import apps
 from ovp_core import urls
+from ovp_core import serializers
 
 class TestSchemaGenerator(TestCase):
   def test_schema_generation(self):
