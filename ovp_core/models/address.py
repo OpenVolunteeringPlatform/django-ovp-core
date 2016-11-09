@@ -120,9 +120,6 @@ def update_address(sender, instance, **kwargs):
         ac = AddressComponent(long_name=component['long_name'], short_name=component['short_name'])
         ac.save()
       else:
-      # Component found, clear types
-      # Maybe we shouldn't erase and recreate the same types relationship(?)
-      # TODO: REFACTOR
         ac = ac.first()
         ac.types.clear()
         ac.save()
