@@ -1,6 +1,7 @@
 from rest_framework import schemas
 
-class OVPSchemaGenerator(schemas.SchemaGenerator):
+# We don't test this as it's tested on drf framework
+class OVPSchemaGenerator(schemas.SchemaGenerator): #pragma: no cover
   def get_schema(self, request=None):
       if self.endpoints is None:
           self.endpoints = self.get_api_endpoints(self.patterns)
