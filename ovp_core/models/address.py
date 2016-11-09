@@ -41,10 +41,10 @@ class GoogleAddress(models.Model):
     locality = self.address_components.filter(types__name='locality')
 
     s = u""
-    if county.count():
-      s += u"{}, ".format(county[0].long_name)
-    elif locality.count():
+    if locality.count():
       s += u"{}, ".format(locality[0].long_name)
+    elif county.count():
+      s += u"{}, ".format(county[0].long_name)
     elif sublocality.count():
       s += u"{}, ".format(sublocality[0].long_name)
 
