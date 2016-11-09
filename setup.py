@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='ovp-core',
     version='1.0.0',
     author=u'Atados',
     author_email='arroyo@atados.com.br',
-    packages=['ovp_core'],
+    packages=find_packages(),
+    include_package_data=True,
     url='https://github.com/OpenVolunteeringPlatform/django-ovp-core',
     download_url = 'https://github.com/OpenVolunteeringPlatform/django-ovp-core/tarball/1.0.0',
     license='AGPL',

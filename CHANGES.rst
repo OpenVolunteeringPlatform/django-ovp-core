@@ -42,3 +42,7 @@ v1.0.0
 * Add tests for email module(BaseMail and EmailThread classes)
 * Add test for OVPSchemaGenerator
 * Add test for address_validate 
+
+v1.0.1
+-----------
+* Replace distutils with setuptools
