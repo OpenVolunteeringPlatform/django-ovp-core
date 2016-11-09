@@ -39,3 +39,4 @@ v0.1.6
 
 v0.1.7[unreleased]
 -----------
+* Add tests for email module(BaseMail and EmailThread classes)
