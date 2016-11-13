@@ -9,7 +9,6 @@ OVP Core
   :target: https://badge.fury.io/py/ovp-core
 
 This module implements core platform functionality, such as skills, causes and addresses.
-It also contains child drf classes such as schema generators.
 
 Getting Started
 ---------------
