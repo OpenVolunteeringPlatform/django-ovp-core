@@ -50,3 +50,6 @@ v1.0.1
 v1.0.2
 -----------
 * Add .egg-info to .gitignore
+
+v1.0.3[unreleased]
+-----------
