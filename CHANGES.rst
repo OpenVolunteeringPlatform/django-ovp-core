@@ -51,5 +51,11 @@ v1.0.2
 -----------
 * Add .egg-info to .gitignore
 
-v1.0.3[unreleased]
+v1.0.3
+-----------
+* Remove OVPSchemaGenerator
+* Upgrade drf to 3.5.3
+
+
+v1.0.4[unreleased]
 -----------
