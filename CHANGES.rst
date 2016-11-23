@@ -59,3 +59,4 @@ v1.0.3
 
 v1.0.4[unreleased]
 -----------
+* Remove unecessary imports from test_execution
