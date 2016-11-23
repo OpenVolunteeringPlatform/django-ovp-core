@@ -33,10 +33,9 @@ class BaseMail:
     msg.attach_alternative(text_content, "text/plain")
     msg.attach_alternative(html_content, "text/html")
 
-
     if self.async_mail:
       async_flag="async"
-    else:
+    elif self.async_mail == None:
       async_flag=getattr(settings, "DEFAULT_SEND_EMAIL", "async")
 
     if async_flag == "async":

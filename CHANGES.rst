@@ -56,7 +56,10 @@ v1.0.3
 * Remove OVPSchemaGenerator
 * Upgrade drf to 3.5.3
 
-
-v1.0.4[unreleased]
+v1.0.4
 -----------
 * Remove unecessary imports from test_execution
+* Only read DEFAULT_SEND_EMAIL if .async_mail is None(not None and False as before)
+
+v1.0.5[unreleased]
+-----------
