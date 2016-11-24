@@ -63,3 +63,4 @@ v1.0.4
 
 v1.0.5[unreleased]
 -----------
+* Add startup route returning skills and causes
