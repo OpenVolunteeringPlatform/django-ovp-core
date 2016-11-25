@@ -4,6 +4,8 @@ from django.db.models import Q, Count
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+from ovp_core import helpers
+
 import os
 import requests
 
@@ -89,13 +91,15 @@ class GoogleAddress(models.Model):
     return ""
 
 
+# Update google address
+settings = helpers.get_settings()
+maps_language = settings.get('MAPS_API_LANGUAGE', 'en_US')
+
 @receiver(post_save, sender=GoogleAddress)
 def update_address(sender, instance, **kwargs):
-  # Query lat and lng at google
-  #r = requests.get('https://maps.googleapis.com/maps/api/geocode/json?latlng={}%20{}'.format(instance.lat, instance.lng))
   addressline = instance.typed_address
 
-  url = 'https://maps.googleapis.com/maps/api/geocode/json?language=pt_BR&address={}'.format(addressline)
+  url = 'https://maps.googleapis.com/maps/api/geocode/json?language={}&address={}'.format(maps_language, addressline)
 
   key = os.environ.get('GOOGLE_MAPS_KEY', None)
   if key: #pragma: no cover

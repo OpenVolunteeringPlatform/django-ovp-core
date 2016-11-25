@@ -65,3 +65,8 @@ v1.0.5
 -----------
 * Add startup route returning skills and causes
 * Add contact form route
+
+v1.0.6
+-----------
+* Change default maps api language to en-US
+* Create OVP_CORE.MAPS_API_LANGUAGE setting
