@@ -61,6 +61,7 @@ v1.0.4
 * Remove unecessary imports from test_execution
 * Only read DEFAULT_SEND_EMAIL if .async_mail is None(not None and False as before)
 
-v1.0.5[unreleased]
+v1.0.5
 -----------
 * Add startup route returning skills and causes
+* Add contact form route
