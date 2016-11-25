@@ -24,8 +24,8 @@ class GoogleAddressModelTestCase(TestCase):
     a = GoogleAddress.objects.get(pk=a.pk)
     self.assertTrue(a.typed_address == "Rua Teçaindá, 81, SP")
     self.assertTrue(a.typed_address2 == "Casa")
-    self.assertTrue(a.address_line == "Rua Teçaindá, 81, Pinheiros, São Paulo, SP, Brasil")
-    self.assertTrue(a.__str__() == "Rua Teçaindá, 81, Pinheiros, São Paulo, SP, Brasil")
+    self.assertTrue(a.address_line == "Rua Teçaindá, 81, Pinheiros, São Paulo, SP, Brazil")
+    self.assertTrue(a.__str__() == "Rua Teçaindá, 81, Pinheiros, São Paulo, SP, Brazil")
     self.assertTrue(a.lat)
     self.assertTrue(a.lng)
 
@@ -34,8 +34,8 @@ class GoogleAddressModelTestCase(TestCase):
     a = GoogleAddress.objects.get(pk=a.pk)
     self.assertTrue(a.typed_address == "Rua Capote Valente, 701, SP")
     self.assertTrue(a.typed_address2 == "Casa")
-    self.assertTrue(a.address_line == "Rua Capote Valente, 701, Pinheiros, São Paulo, SP, Brasil")
-    self.assertTrue(a.__str__()  == "Rua Capote Valente, 701, Pinheiros, São Paulo, SP, Brasil")
+    self.assertTrue(a.address_line == "Rua Capote Valente, 701, Pinheiros, São Paulo, SP, Brazil")
+    self.assertTrue(a.__str__()  == "Rua Capote Valente, 701, Pinheiros, São Paulo, SP, Brazil")
     self.assertTrue(a.lat)
     self.assertTrue(a.lng)
 
