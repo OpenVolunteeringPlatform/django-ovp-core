@@ -70,3 +70,7 @@ v1.0.6
 -----------
 * Change default maps api language to en-US
 * Create OVP_CORE.MAPS_API_LANGUAGE setting
+
+1.0.7
+-----------
+* Fix tests broken by last release
