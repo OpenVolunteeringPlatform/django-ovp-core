@@ -103,7 +103,10 @@ settings.configure(
     ],
     DEFAULT_SEND_EMAIL='sync',
     REST_FRAMEWORK=REST_FRAMEWORK,
-    AUTH_PASSWORD_VALIDATORS=AUTH_PASSWORD_VALIDATORS
+    AUTH_PASSWORD_VALIDATORS=AUTH_PASSWORD_VALIDATORS,
+    OVP_CORE={
+      'VALID_CONTACT_RECIPIENTS': ['testemail@1.com', 'testemail@2.com']
+    }
 )
 
 django.setup()

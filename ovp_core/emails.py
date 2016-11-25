@@ -44,3 +44,20 @@ class BaseMail:
       return t
     else:
       return msg.send() > 0
+
+
+class ContactFormMail(BaseMail):
+  """
+  This class is reponsible for firing emails sent through the contact form
+  """
+  def __init__(self, recipients, async_mail=None):
+    self.recipients = recipients
+    self.async = async_mail
+
+  def sendContact(self, context={}):
+    """
+    Send contact form message to single or multiple recipients
+    """
+    for recipient in self.recipients:
+      super(ContactFormMail, self).__init__(recipient, self.async)
+      self.sendEmail('contactForm', 'New contact form message', context)
