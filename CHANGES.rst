@@ -74,3 +74,7 @@ v1.0.6
 1.0.7
 -----------
 * Fix tests broken by last release
+
+1.0.8
+-----------
+* Create GoogleAddressCityStateSerializer
