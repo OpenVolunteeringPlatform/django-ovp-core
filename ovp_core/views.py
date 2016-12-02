@@ -27,8 +27,9 @@ def contact(request):
   name = request.data.get("name", "")
   message = request.data.get("message", "")
   email = request.data.get("email", "")
+  phone = request.data.get("phone", "")
   recipients = request.data.get("recipients", [])
-  context = {"name": name, "message": message, "email": email}
+  context = {"name": name, "message": message, "email": email, "phone": phone}
 
   # Check if all recipients are valid
   for recipient in recipients:

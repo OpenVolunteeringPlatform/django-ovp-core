@@ -25,7 +25,7 @@ class TestStartupView(TestCase):
 class TestContactFormView(TestCase):
   def setUp(self):
     self.client = APIClient()
-    self.basis_data = {"name": "my-name", "message": "my message", "email": "reply_to@asddsa.com"}
+    self.basis_data = {"name": "my-name", "message": "my message", "email": "reply_to@asddsa.com", "phone": "+5511912345678"}
 
   def test_cant_send_invalid_recipient(self):
     """ Test sending contact form to invalid recipient does not work """
@@ -54,6 +54,8 @@ class TestContactFormView(TestCase):
     self.assertTrue(data["name"] in mail.outbox[0].body)
     self.assertTrue(data["message"] in mail.outbox[0].body)
     self.assertTrue(data["email"] in mail.outbox[0].body)
+    self.assertTrue(data["phone"] in mail.outbox[0].body)
+
 
   def test_can_send_multiple_valid_recipients(self):
     """ Test sending contact form to multiple valid recipient does work """
