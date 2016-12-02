@@ -41,4 +41,3 @@ def contact(request):
   contact.sendContact(context=context)
 
   return response.Response({"success": True})
-
