@@ -71,10 +71,14 @@ v1.0.6
 * Change default maps api language to en-US
 * Create OVP_CORE.MAPS_API_LANGUAGE setting
 
-1.0.7
+v1.0.7
 -----------
 * Fix tests broken by last release
 
-1.0.8
+v1.0.8
 -----------
 * Create GoogleAddressCityStateSerializer
+
+v1.0.9
+-----------
+* Add 'phone' field to contact view
