@@ -82,3 +82,7 @@ v1.0.8
 v1.0.9
 -----------
 * Add 'phone' field to contact view
+
+v1.0.10
+-----------
+* Set up internationalization on startup route and add pt_BR locale
