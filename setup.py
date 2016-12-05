@@ -21,6 +21,5 @@ setup(
       'djangorestframework>=3.5.3,<3.6.0',
       'codecov>=2.0.5,<2.1.0',
       'coverage>=4.2,<4.3.0',
-      'django-modeltranslation>=0.12,<1.0',
     ]
 )
