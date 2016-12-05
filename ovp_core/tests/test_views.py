@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.core import mail
+from django.utils import translation
 
 from rest_framework.reverse import reverse
 from rest_framework.test import APIClient
@@ -12,7 +13,7 @@ class TestStartupView(TestCase):
     self.skills_data = serializers.SkillSerializer(models.Skill.objects.all(), many=True).data
     self.causes_data = serializers.CauseSerializer(models.Cause.objects.all(), many=True).data
 
-  def test_returned_startup_data(self):
+  def test_returns_startup_data(self):
     """ Test startup route returns skills and causes """
     client = APIClient()
     response = client.get(reverse("startup"), format="json")
@@ -20,6 +21,18 @@ class TestStartupView(TestCase):
     self.assertTrue(response.status_code == 200)
     self.assertTrue(response.data["skills"] == self.skills_data)
     self.assertTrue(response.data["causes"] == self.causes_data)
+
+  def test_returns_localized_startup_data(self):
+    """ Test startup route returns skills and causes """
+    client = APIClient(HTTP_ACCEPT_LANGUAGE="pt-br")
+    response = client.get(reverse("startup"), format="json")
+
+    with translation.override('pt-br'):
+      skills_data = serializers.SkillSerializer(models.Skill.objects.all(), many=True).data
+      causes_data = serializers.CauseSerializer(models.Cause.objects.all(), many=True).data
+      self.assertTrue(response.status_code == 200)
+      self.assertTrue(response.data["skills"] == skills_data)
+      self.assertTrue(response.data["causes"] == causes_data)
 
 
 class TestContactFormView(TestCase):

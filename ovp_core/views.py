@@ -6,17 +6,19 @@ from ovp_core import models
 from ovp_core import serializers
 from ovp_core import helpers
 from ovp_core import emails
+from django.utils import translation
 
 @decorators.api_view(["GET"])
 def startup(request):
   """ This view provides initial data to the client, such as available skills and causes """
-  skills = serializers.SkillSerializer(models.Skill.objects.all(), many=True)
-  causes = serializers.CauseSerializer(models.Cause.objects.all(), many=True)
+  with translation.override(translation.get_language_from_request(request)):
+    skills = serializers.SkillSerializer(models.Skill.objects.all(), many=True)
+    causes = serializers.CauseSerializer(models.Cause.objects.all(), many=True)
 
-  return response.Response({
-    "skills": skills.data,
-    "causes": causes.data
-  })
+    return response.Response({
+      "skills": skills.data,
+      "causes": causes.data
+    })
 
 
 @decorators.api_view(["POST"])

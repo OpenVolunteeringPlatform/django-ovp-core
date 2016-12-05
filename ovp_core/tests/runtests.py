@@ -15,6 +15,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(BASE_DIR, '../..')))
 # decorator, because it would miss the database setup.
 CUSTOM_INSTALLED_APPS = (
     'ovp_core',
+    'vinaigrette',
     'django.contrib.admin',
 )
 
@@ -60,6 +61,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+gettext = lambda s: s
 
 settings.configure(
     SECRET_KEY="django_tests_secret_key",
@@ -74,6 +76,10 @@ settings.configure(
             'ENGINE': 'django.db.backends.sqlite3',
         }
     },
+    LANGUAGES = (
+      ('en-us', gettext('English')),
+      ('pt-br', gettext('Portuguese')),
+    ),
     LANGUAGE_CODE='en-us',
     TIME_ZONE='UTC',
     USE_I18N=True,
