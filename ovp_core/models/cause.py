@@ -1,3 +1,4 @@
+import vinaigrette
 from django.db import models
 
 class Cause(models.Model):
@@ -10,3 +11,5 @@ class Cause(models.Model):
     app_label = 'ovp_core'
     verbose_name = 'cause'
     verbose_name_plural = 'causes'
+
+vinaigrette.register(Cause, ['name'])
