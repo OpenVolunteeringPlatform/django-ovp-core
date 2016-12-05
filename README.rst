@@ -20,6 +20,8 @@ Installing
 
 2. Add it to `INSTALLED_APPS` on `settings.py`
 
+3. Add `vinaigrette` to `INSTALLED_APPS`
+
 
 Forking
 """"""""""""""
