@@ -1,3 +1,4 @@
+import vinaigrette
 from django.db import models
 
 class Skill(models.Model):
@@ -9,3 +10,5 @@ class Skill(models.Model):
   class Meta:
     app_label = 'ovp_core'
     verbose_name = 'skill'
+
+vinaigrette.register(Skill, ['name'])
