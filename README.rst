@@ -8,12 +8,6 @@ OVP Core
 .. image:: https://img.shields.io/pypi/v/ovp-core.svg?style=flat-square
   :target: https://pypi.python.org/pypi/ovp-core/
 
-.. image:: https://app.codeship.com/projects/38278119-748d-0134-a972-3a52ed362f75/status?branch=master
-.. image:: https://codecov.io/gh/OpenVolunteeringPlatform/django-ovp-core/branch/master/graph/badge.svg
-  :target: https://codecov.io/gh/OpenVolunteeringPlatform/django-ovp-core
-.. image:: https://badge.fury.io/py/ovp-core.svg
-  :target: https://badge.fury.io/py/ovp-core
-
 This module implements core platform functionality, such as skills, causes and addresses.
 
 Getting Started
