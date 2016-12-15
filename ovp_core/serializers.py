@@ -2,6 +2,9 @@ from ovp_core import models
 
 from rest_framework import serializers
 
+class EmptySerializer(serializers.Serializer):
+  class Meta:
+    fields = []
 
 class GoogleAddressSerializer(serializers.ModelSerializer):
   class Meta:
