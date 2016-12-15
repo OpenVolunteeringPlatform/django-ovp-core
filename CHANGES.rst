@@ -94,3 +94,7 @@ v1.0.11
 v1.0.12
 -----------
 * Create EmptySerializer
+
+v1.0.13[request]
+-----------
+* Remove city_state() sublocality assertion

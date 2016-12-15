@@ -43,18 +43,13 @@ class GoogleAddressModelTestCase(TestCase):
     self.assertTrue(a.__str__() == "")
 
   def test_locality(self):
-    """Assert GoogleAddressModel.get_city_state preference order is locality, administrative_area_2, sublocality"""
+    """Assert GoogleAddressModel.get_city_state preference order is locality, administrative_area_2"""
     a = GoogleAddress(typed_address="Chicago")
     a.save()
     self.assertTrue("Chicago" in a.get_city_state())
 
     a = remove_component(a, ['locality'])
     self.assertTrue("Cook" in a.get_city_state())
-
-    a = GoogleAddress(typed_address="Sarchnar")
-    a.save()
-    a = remove_component(a, ['locality', 'administrative_area_level_2'])
-    self.assertTrue("Rahimawa" in a.get_city_state())
 
 
 class AddressComponentTypeModelTestCase(TestCase):
