@@ -95,6 +95,10 @@ v1.0.12
 -----------
 * Create EmptySerializer
 
-v1.0.13[request]
+v1.0.13
 -----------
 * Remove city_state() sublocality assertion
+* Fix pt_BR translation for Communication and Dance/Music skills
+
+v1.0.14[unreleased]
+-----------
