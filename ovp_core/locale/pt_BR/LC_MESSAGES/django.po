@@ -26,10 +26,10 @@ msgid "Arts/Handcrafting"
 msgstr "Artes/Artesanato"
 
 msgid "Communication"
-msgstr "Português"
+msgstr "Comunicação"
 
 msgid "Dance/Music"
-msgstr "Português"
+msgstr "Dança/Música"
 
 msgid "Law"
 msgstr "Direito"
