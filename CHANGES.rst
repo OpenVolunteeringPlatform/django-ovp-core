@@ -100,7 +100,10 @@ v1.0.13
 * Remove city_state() sublocality assertion
 * Fix pt_BR translation for Communication and Dance/Music skills
 
-v1.1.0[unreleased]
+v1.1.0
 -----------
 * Inject CLIENT_URL in emails context
 * Allow emails to be disabled or get the subject overriden by OVP_EMAILS setting
+
+v1.1.1[unreleased]
+-----------
