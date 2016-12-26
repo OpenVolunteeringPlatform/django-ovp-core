@@ -3,6 +3,8 @@ from django.template import Context, Template
 from django.template.loader import get_template
 from django.conf import settings
 
+from ovp_core.helpers import is_email_enabled, get_email_subject
+
 import threading
 
 class EmailThread(threading.Thread):
@@ -25,6 +27,11 @@ class BaseMail:
     self.async_mail = async_mail
 
   def sendEmail(self, template_name, subject, context={}):
+    if not is_email_enabled(template_name):
+      return False
+
+    subject = get_email_subject(template_name, subject)
+
     ctx = Context(inject_client_url(context))
     text_content = get_template('email/{}.txt'.format(template_name)).render(ctx)
     html_content = get_template('email/{}.html'.format(template_name)).render(ctx)

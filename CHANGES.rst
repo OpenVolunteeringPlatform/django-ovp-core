@@ -103,3 +103,4 @@ v1.0.13
 v1.1.0[unreleased]
 -----------
 * Inject CLIENT_URL in emails context
+* Allow emails to be disabled or get the subject overriden by OVP_EMAILS setting
