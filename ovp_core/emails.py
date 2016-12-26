@@ -24,8 +24,8 @@ class BaseMail:
     self.email_address = email_address
     self.async_mail = async_mail
 
-  def sendEmail(self, template_name, subject, context):
-    ctx = Context(context)
+  def sendEmail(self, template_name, subject, context={}):
+    ctx = Context(inject_client_url(context))
     text_content = get_template('email/{}.txt'.format(template_name)).render(ctx)
     html_content = get_template('email/{}.html'.format(template_name)).render(ctx)
 
@@ -61,3 +61,12 @@ class ContactFormMail(BaseMail):
     for recipient in self.recipients:
       super(ContactFormMail, self).__init__(recipient, self.async)
       self.sendEmail('contactForm', 'New contact form message', context)
+
+
+#
+# Helpers
+#
+
+def inject_client_url(ctx):
+  url = getattr(settings, "CLIENT_URL", "async")
+  return ctx

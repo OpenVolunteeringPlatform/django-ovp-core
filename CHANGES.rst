@@ -100,5 +100,6 @@ v1.0.13
 * Remove city_state() sublocality assertion
 * Fix pt_BR translation for Communication and Dance/Music skills
 
-v1.0.14[unreleased]
+v1.1.0[unreleased]
 -----------
+* Inject CLIENT_URL in emails context
