@@ -3,7 +3,7 @@ from django.template import Context, Template
 from django.template.loader import get_template
 from django.conf import settings
 
-from ovp_core.helpers import is_email_enabled, get_email_subject
+from ovp_core.helpers import get_settings, is_email_enabled, get_email_subject
 
 import threading
 
@@ -75,5 +75,6 @@ class ContactFormMail(BaseMail):
 #
 
 def inject_client_url(ctx):
-  url = getattr(settings, "CLIENT_URL", "async")
+  s = get_settings()
+  ctx['CLIENT_URL'] = s.get("CLIENT_URL", "")
   return ctx
