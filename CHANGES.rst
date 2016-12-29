@@ -109,7 +109,10 @@ v1.1.1
 -----------
 * Fix emails.inject_client_url
 
-v1.1.2[unreleased]
+v1.1.2
 -----------
 * Fix settings reader on GoogleAddress
 * Add override_settings to 3 tests so they can work when inside a django project with arbitrary settings
+
+v1.1.3[unreleased]
+-----------
