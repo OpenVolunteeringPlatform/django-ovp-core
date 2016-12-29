@@ -111,3 +111,5 @@ v1.1.1
 
 v1.1.2[unreleased]
 -----------
+* Fix settings reader on GoogleAddress
+* Add override_settings to 3 tests so they can work when inside a django project with arbitrary settings

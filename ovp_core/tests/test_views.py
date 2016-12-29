@@ -1,4 +1,5 @@
 from django.test import TestCase
+from django.test.utils import override_settings
 from django.core import mail
 from django.utils import translation
 
@@ -40,6 +41,7 @@ class TestContactFormView(TestCase):
     self.client = APIClient()
     self.basis_data = {"name": "my-name", "message": "my message", "email": "reply_to@asddsa.com", "phone": "+5511912345678"}
 
+  @override_settings(OVP_CORE={"VALID_CONTACT_RECIPIENTS": []})
   def test_cant_send_invalid_recipient(self):
     """ Test sending contact form to invalid recipient does not work """
     data = self.basis_data
@@ -56,6 +58,7 @@ class TestContactFormView(TestCase):
     self.assertTrue(response.data["detail"] == "Invalid recipients.")
     self.assertTrue(len(mail.outbox) == 0)
 
+  @override_settings(OVP_CORE={"VALID_CONTACT_RECIPIENTS": ["testemail@1.com"]})
   def test_can_send_valid_recipient(self):
     """ Test sending contact form to valid recipient does work """
     data = self.basis_data
@@ -69,7 +72,7 @@ class TestContactFormView(TestCase):
     self.assertTrue(data["email"] in mail.outbox[0].body)
     self.assertTrue(data["phone"] in mail.outbox[0].body)
 
-
+  @override_settings(OVP_CORE={"VALID_CONTACT_RECIPIENTS": ["testemail@1.com", "testemail@2.com"]})
   def test_can_send_multiple_valid_recipients(self):
     """ Test sending contact form to multiple valid recipient does work """
     data = self.basis_data
