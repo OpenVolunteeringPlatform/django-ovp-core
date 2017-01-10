@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-02 16:47+0000\n"
+"POT-Creation-Date: 2017-01-10 16:41+0000\n"
 "PO-Revision-Date: 2016-12-02 16:47+0000\n"
 "Last-Translator: Leonardo Arroyo <contato@leonardoarroyo.com>\n"
 "Language-Team: Leonardo Arroyo <contato@leonardoarroyo.com>\n"
@@ -16,77 +16,79 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: django-ovp-core/ovp_core/tests/runtests.py:80
 msgid "English"
 msgstr "Inglês"
 
+#: django-ovp-core/ovp_core/tests/runtests.py:81
 msgid "Portuguese"
 msgstr "Português"
 
-msgid "Arts/Handcrafting"
-msgstr "Artes/Artesanato"
+#~ msgid "Arts/Handcrafting"
+#~ msgstr "Artes/Artesanato"
 
-msgid "Communication"
-msgstr "Comunicação"
+#~ msgid "Communication"
+#~ msgstr "Comunicação"
 
-msgid "Dance/Music"
-msgstr "Dança/Música"
+#~ msgid "Dance/Music"
+#~ msgstr "Dança/Música"
 
-msgid "Law"
-msgstr "Direito"
+#~ msgid "Law"
+#~ msgstr "Direito"
 
-msgid "Education"
-msgstr "Educação"
+#~ msgid "Education"
+#~ msgstr "Educação"
 
-msgid "Sports"
-msgstr "Esportes"
+#~ msgid "Sports"
+#~ msgstr "Esportes"
 
-msgid "Cooking"
-msgstr "Gastronomia"
+#~ msgid "Cooking"
+#~ msgstr "Gastronomia"
 
-msgid "Management"
-msgstr "Gestão"
+#~ msgid "Management"
+#~ msgstr "Gestão"
 
-msgid "Idioms"
-msgstr "Idiomas"
+#~ msgid "Idioms"
+#~ msgstr "Idiomas"
 
-msgid "Computers/Technology"
-msgstr "Informática/Tecnologia"
+#~ msgid "Computers/Technology"
+#~ msgstr "Informática/Tecnologia"
 
-msgid "Health"
-msgstr "Saúde"
+#~ msgid "Health"
+#~ msgstr "Saúde"
 
-msgid "Others"
-msgstr "Outros"
+#~ msgid "Others"
+#~ msgstr "Outros"
 
-msgid "Professional Training"
-msgstr "Capacitação Profissional"
+#~ msgid "Professional Training"
+#~ msgstr "Capacitação Profissional"
 
-msgid "Fight Poverty"
-msgstr "Combate à Pobreza"
+#~ msgid "Fight Poverty"
+#~ msgstr "Combate à Pobreza"
 
-msgid "Conscious consumption"
-msgstr "Consumo Consciente"
+#~ msgid "Conscious consumption"
+#~ msgstr "Consumo Consciente"
 
-msgid "Culture, Sport and Art"
-msgstr "Cultura, Esporte e Arte"
+#~ msgid "Culture, Sport and Art"
+#~ msgstr "Cultura, Esporte e Arte"
 
-msgid "Human Rights"
-msgstr "Direitos Humanos"
+#~ msgid "Human Rights"
+#~ msgstr "Direitos Humanos"
 
-msgid "Youth"
-msgstr "Crianças e Jovens"
+#~ msgid "Youth"
+#~ msgstr "Crianças e Jovens"
 
-msgid "Elders"
-msgstr "Idosos"
+#~ msgid "Elders"
+#~ msgstr "Idosos"
 
-msgid "Environment"
-msgstr "Meio Ambiente"
+#~ msgid "Environment"
+#~ msgstr "Meio Ambiente"
 
-msgid "Citizen Participation"
-msgstr "Participação Cidadã"
+#~ msgid "Citizen Participation"
+#~ msgstr "Participação Cidadã"
 
-msgid "Animal Protection"
-msgstr "Proteção Animal"
+#~ msgid "Animal Protection"
+#~ msgstr "Proteção Animal"
 
-msgid "People with disabilities"
-msgstr "Pessoas com Deficiência"
+#~ msgid "People with disabilities"
+#~ msgstr "Pessoas com Deficiência"
