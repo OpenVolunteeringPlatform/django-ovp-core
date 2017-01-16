@@ -118,5 +118,9 @@ v1.1.3
 -----------
 * Implement admin panel
 
-v1.1.4[unreleased]
+v1.1.4
+-----------
+* Impl CountryFilterMixin
+
+v1.1.5[unreleased]
 -----------
