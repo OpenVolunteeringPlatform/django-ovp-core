@@ -122,5 +122,9 @@ v1.1.4
 -----------
 * Impl CountryFilterMixin
 
-v1.1.5[unreleased]
+v1.1.5
+-----------
+* Impl Lead model, serializer and admin"
+
+v1.1.6[unreleased]
 -----------

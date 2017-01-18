@@ -1,3 +1,4 @@
-from ovp_core.models.address import GoogleAddress, AddressComponent, AddressComponentType, GoogleRegion
-from ovp_core.models.cause import Cause
-from ovp_core.models.skill import Skill
+from .address import GoogleAddress, AddressComponent, AddressComponentType, GoogleRegion
+from .cause import Cause
+from .skill import Skill
+from .lead import Lead
