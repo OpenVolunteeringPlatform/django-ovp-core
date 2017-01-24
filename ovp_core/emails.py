@@ -37,7 +37,6 @@ class BaseMail:
     html_content = get_template('email/{}.html'.format(template_name)).render(ctx)
 
     msg = EmailMultiAlternatives(subject, text_content, self.from_email, [self.email_address])
-    msg.attach_alternative(text_content, "text/plain")
     msg.attach_alternative(html_content, "text/html")
 
     if self.async_mail:

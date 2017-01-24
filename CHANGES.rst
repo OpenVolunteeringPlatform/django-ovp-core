@@ -124,7 +124,11 @@ v1.1.4
 
 v1.1.5
 -----------
-* Impl Lead model, serializer and admin"
+* Impl Lead model, serializer and admin
 
-v1.1.6[unreleased]
+v1.1.6
+-----------
+* Remove TXT version attachment to provent duplicate text versions on emails
+
+v1.1.7[unreleased]
 -----------
