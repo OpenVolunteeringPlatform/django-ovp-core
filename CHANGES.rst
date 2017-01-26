@@ -114,21 +114,12 @@ v1.1.2
 * Fix settings reader on GoogleAddress
 * Add override_settings to 3 tests so they can work when inside a django project with arbitrary settings
 
-v1.1.3
+v1.2.0
 -----------
 * Implement admin panel
-
-v1.1.4
------------
 * Impl CountryFilterMixin
-
-v1.1.5
------------
 * Impl Lead model, serializer and admin
-
-v1.1.6
------------
 * Remove TXT version attachment to provent duplicate text versions on emails
 
-v1.1.7[unreleased]
+v1.2.0[unreleased]
 -----------
