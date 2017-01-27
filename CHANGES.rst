@@ -117,9 +117,13 @@ v1.1.2
 v1.2.0
 -----------
 * Implement admin panel
-* Impl CountryFilterMixin
-* Impl Lead model, serializer and admin
+* Implement CountryFilterMixin
+* Implement Lead model, serializer and admin
 * Remove TXT version attachment to provent duplicate text versions on emails
 
-v1.2.0[unreleased]
+v1.2.1
+-----------
+* Upgrade all dependencies
+
+v1.2.2[unreleased]
 -----------
