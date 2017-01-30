@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-11 18:51+0000\n"
+"POT-Creation-Date: 2017-01-30 18:22+0000\n"
 "PO-Revision-Date: 2016-12-02 16:47+0000\n"
 "Last-Translator: Leonardo Arroyo <contato@leonardoarroyo.com>\n"
 "Language-Team: Leonardo Arroyo <contato@leonardoarroyo.com>\n"
@@ -19,6 +19,30 @@ msgstr ""
 #: django-ovp-core/ovp_core/models/cause.py:14
 msgid "cause"
 msgstr "causa"
+
+#: django-ovp-core/ovp_core/models/lead.py:5
+msgid "Name"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:6
+msgid "Email"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:7
+msgid "Phone"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:8
+msgid "Country"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:12
+msgid "Lead"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:13
+msgid "Leads"
+msgstr ""
 
 #: django-ovp-core/ovp_core/models/skill.py:7
 msgid "name"
