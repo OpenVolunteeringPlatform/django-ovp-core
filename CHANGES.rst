@@ -125,5 +125,9 @@ v1.2.1
 -----------
 * Upgrade all dependencies
 
-v1.2.2[unreleased]
+v1.2.2
+-----------
+* Update pt_BR locale
+
+v1.2.3[unreleased]
 -----------
