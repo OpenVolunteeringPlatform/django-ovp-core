@@ -93,6 +93,9 @@ class GoogleAddress(models.Model):
 
 @receiver(post_save, sender=GoogleAddress)
 def update_address(sender, instance, **kwargs):
+  if kwargs.get('raw', False): # pragma: no cover
+    return None
+
   settings = helpers.get_settings()
   maps_language = settings.get('MAPS_API_LANGUAGE', 'en_US')
 

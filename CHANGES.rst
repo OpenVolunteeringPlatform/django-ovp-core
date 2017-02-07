@@ -131,3 +131,4 @@ v1.2.2
 
 v1.2.3[unreleased]
 -----------
+* Add raw check on post_save signal for GoogleAddress
