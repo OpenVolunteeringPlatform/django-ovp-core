@@ -130,5 +130,9 @@ v1.2.2
 * Update pt_BR locale
 * Add raw check on post_save signal for GoogleAddress
 
-v1.2.3[unreleased]
+v1.2.3
+-----------
+* Add #get_country_code() to GoogleAddress
+
+v1.2.4[unreleased]
 -----------

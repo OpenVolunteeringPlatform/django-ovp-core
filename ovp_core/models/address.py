@@ -84,6 +84,11 @@ class GoogleAddress(models.Model):
 
     return string_address
 
+  def get_country_code(self):
+    try:
+      return self.address_components.filter(types__name='country').first().short_name.lower()
+    except (AttributeError):
+      return None
 
   def __str__(self):
     if self.address_line:
