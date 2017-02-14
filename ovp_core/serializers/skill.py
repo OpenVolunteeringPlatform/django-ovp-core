@@ -4,5 +4,5 @@ from rest_framework import serializers
 
 class SkillSerializer(serializers.ModelSerializer):
   class Meta:
-    fields = ['name']
+    fields = ['id', 'name']
     model = models.Skill

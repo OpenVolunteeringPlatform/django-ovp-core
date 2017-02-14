@@ -4,5 +4,5 @@ from rest_framework import serializers
 
 class CauseSerializer(serializers.ModelSerializer):
   class Meta:
-    fields = ['name']
+    fields = ['id', 'name']
     model = models.Cause
