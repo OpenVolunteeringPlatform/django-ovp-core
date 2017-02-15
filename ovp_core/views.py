@@ -26,7 +26,6 @@ def contact(request):
   settings = helpers.get_settings()
   valid_emails = settings.get("VALID_CONTACT_RECIPIENTS", [])
 
-  print(request.data)
 
   name = request.data.get("name", "")
   message = request.data.get("message", "")
@@ -34,6 +33,9 @@ def contact(request):
   phone = request.data.get("phone", "")
   recipients = request.data.get("recipients", request.data.get("recipients[]", []))
   context = {"name": name, "message": message, "email": email, "phone": phone}
+
+  if not type(recipients) is list:
+    recipients = [recipients]
 
   # Check if all recipients are valid
   for recipient in recipients:
