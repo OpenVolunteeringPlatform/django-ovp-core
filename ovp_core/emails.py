@@ -2,18 +2,19 @@ from django.core.mail import EmailMultiAlternatives
 from django.template import Context, Template
 from django.template.loader import get_template
 from django.conf import settings
+from django.utils import translation
 
 from ovp_core.helpers import get_settings, is_email_enabled, get_email_subject
 
 import threading
 
 class EmailThread(threading.Thread):
-    def __init__(self, msg):
-      self.msg = msg
-      threading.Thread.__init__(self)
+  def __init__(self, msg):
+    self.msg = msg
+    threading.Thread.__init__(self)
 
-    def run (self):
-      return self.msg.send() > 0
+  def run (self):
+    return self.msg.send() > 0
 
 
 class BaseMail:
@@ -22,9 +23,10 @@ class BaseMail:
   """
   from_email = ''
 
-  def __init__(self, email_address, async_mail=None):
+  def __init__(self, email_address, async_mail=None, locale=None):
     self.email_address = email_address
     self.async_mail = async_mail
+    self.locale = locale or get_settings().get('LANGUAGE_CODE', 'en-us')
 
   def sendEmail(self, template_name, subject, context={}):
     if not is_email_enabled(template_name):
@@ -44,13 +46,24 @@ class BaseMail:
     elif self.async_mail == None:
       async_flag=getattr(settings, "DEFAULT_SEND_EMAIL", "async")
 
+    self.__setLocale()
     if async_flag == "async":
       t = EmailThread(msg)
       t.start()
-      return t
+      result = t
     else:
-      return msg.send() > 0
+      result = msg.send() > 0
 
+    self.__resetLocale()
+    return result
+
+  def __setLocale(self):
+    self.__active_locale = translation.get_language()
+    translation.activate(self.locale)
+
+  def __resetLocale(self):
+    translation.activate(self.__active_locale)
+    self.__active_locale = None
 
 class ContactFormMail(BaseMail):
   """
