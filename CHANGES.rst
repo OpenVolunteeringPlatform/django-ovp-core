@@ -133,5 +133,6 @@ v1.2.2
 v1.2.3[unreleased]
 -----------
 * Add #get_country_code() to GoogleAddress
+* Add localization functionality to emails
 * Add id to SkillSerializer and CauseSerializer
 * Add required=False to name on SkillSerializer and CauseSerializer
