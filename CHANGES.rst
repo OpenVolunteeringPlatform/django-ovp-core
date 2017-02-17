@@ -134,3 +134,4 @@ v1.2.3[unreleased]
 -----------
 * Add #get_country_code() to GoogleAddress
 * Add id to SkillSerializer and CauseSerializer
+* Add required=False to name on SkillSerializer and CauseSerializer
