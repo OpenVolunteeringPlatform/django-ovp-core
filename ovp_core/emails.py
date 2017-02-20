@@ -34,9 +34,11 @@ class BaseMail:
 
     subject = get_email_subject(template_name, subject)
 
+    self.__setLocale()
     ctx = Context(inject_client_url(context))
     text_content = get_template('email/{}.txt'.format(template_name)).render(ctx)
     html_content = get_template('email/{}.html'.format(template_name)).render(ctx)
+    self.__resetLocale()
 
     msg = EmailMultiAlternatives(subject, text_content, self.from_email, [self.email_address])
     msg.attach_alternative(html_content, "text/html")
@@ -46,7 +48,6 @@ class BaseMail:
     elif self.async_mail == None:
       async_flag=getattr(settings, "DEFAULT_SEND_EMAIL", "async")
 
-    self.__setLocale()
     if async_flag == "async":
       t = EmailThread(msg)
       t.start()
@@ -54,7 +55,6 @@ class BaseMail:
     else:
       result = msg.send() > 0
 
-    self.__resetLocale()
     return result
 
   def __setLocale(self):
