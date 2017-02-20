@@ -137,7 +137,10 @@ v1.2.3
 * Add id to SkillSerializer and CauseSerializer
 * Add required=False to name on SkillSerializer and CauseSerializer
 
-v1.2.4[unreleased]
+v1.2.4
 -----------
 * Create SkillAssociationSerializer and CauseAssociationSerializer
+* Fix locale setting on emails
 
+v1.2.5[unreleased]
+-----------
