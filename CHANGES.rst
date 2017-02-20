@@ -139,3 +139,5 @@ v1.2.3
 
 v1.2.4[unreleased]
 -----------
+* Create SkillAssociationSerializer and CauseAssociationSerializer
+
