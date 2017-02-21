@@ -141,6 +141,7 @@ v1.2.4
 -----------
 * Create SkillAssociationSerializer and CauseAssociationSerializer
 * Fix locale setting on emails
+* Add setting to disable emails
 
 v1.2.5[unreleased]
 -----------

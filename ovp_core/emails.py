@@ -6,7 +6,7 @@ from django.utils import translation
 
 from ovp_core.helpers import get_settings, is_email_enabled, get_email_subject
 
-import threading
+import threading, sys
 
 class EmailThread(threading.Thread):
   def __init__(self, msg):
@@ -27,6 +27,24 @@ class BaseMail:
     self.email_address = email_address
     self.async_mail = async_mail
     self.locale = locale or get_settings().get('LANGUAGE_CODE', 'en-us')
+
+  def __getattribute__(self, attr):
+    if attr.startswith('send') and not attr == 'sendEmail':
+      mail_func = attr[4:5].lower() + attr[5:]
+      try:
+        if mail_func in settings.OVP_CORE['MAIL']['DISABLE']:
+          return self.__missSendEmail
+      except KeyError:
+        pass
+
+    try:
+      return super().__getattribute__(attr)
+    except BaseException:
+      exc = sys.exc_info()
+      raise exc[0](exc[1].args[0]).with_traceback(exc[2].tb_next) from None
+
+  def __missSendEmail(self, *args, **kargs):
+    return True
 
   def sendEmail(self, template_name, subject, context={}):
     if not is_email_enabled(template_name):
