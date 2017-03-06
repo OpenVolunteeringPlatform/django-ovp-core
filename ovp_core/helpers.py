@@ -1,4 +1,6 @@
 from django.conf import settings
+from django.utils.translation import ugettext as _
+
 
 def get_settings(string="OVP_CORE"):
   return getattr(settings, string, {})
@@ -25,4 +27,4 @@ def get_email_subject(email, default):
 
   title = email_settings.get("subject", default)
 
-  return title
+  return _(title)

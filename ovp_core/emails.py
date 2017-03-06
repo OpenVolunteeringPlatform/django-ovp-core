@@ -3,7 +3,6 @@ from django.template import Context, Template
 from django.template.loader import get_template
 from django.conf import settings
 from django.utils import translation
-
 from ovp_core.helpers import get_settings, is_email_enabled, get_email_subject
 
 import threading, sys
@@ -50,9 +49,9 @@ class BaseMail:
     if not is_email_enabled(template_name):
       return False
 
+    self.__setLocale()
     subject = get_email_subject(template_name, subject)
 
-    self.__setLocale()
     ctx = Context(inject_client_url(context))
     text_content = get_template('email/{}.txt'.format(template_name)).render(ctx)
     html_content = get_template('email/{}.html'.format(template_name)).render(ctx)
