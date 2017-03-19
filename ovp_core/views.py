@@ -55,9 +55,9 @@ from .models import Lead
 @decorators.api_view(["POST"])
 def record_lead(request):
   Lead.objects.create(
-    name=request.get('name', None),
-    email=request.get('email', None),
-    phone=request.get('phone', None),
-    country=request.get('country', None)
+    name=request.data.get('name', None),
+    email=request.data.get('email', None),
+    phone=request.data.get('phone', None),
+    country=request.data.get('country', None)
   )
   return response.Response({"success": True})
