@@ -14,10 +14,12 @@ def startup(request):
   with translation.override(translation.get_language_from_request(request)):
     skills = serializers.SkillSerializer(models.Skill.objects.all(), many=True)
     causes = serializers.CauseSerializer(models.Cause.objects.all(), many=True)
+    cities = serializers.GoogleAddressCityStateSerializer(models.GoogleAddress.objects.all(), many=True)
 
     return response.Response({
       "skills": skills.data,
-      "causes": causes.data
+      "causes": causes.data,
+      "cities": cities.data
     })
 
 
