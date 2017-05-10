@@ -146,3 +146,5 @@ v1.2.4
 v1.2.5[unreleased]
 -----------
 * Fix issue with serializers overridden by old serializers code
+* Implemented Availability entity with model and serializer
+

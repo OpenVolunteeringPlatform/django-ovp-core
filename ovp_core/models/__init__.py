@@ -2,3 +2,4 @@ from .address import GoogleAddress, AddressComponent, AddressComponentType, Goog
 from .cause import Cause
 from .skill import Skill
 from .lead import Lead
+from .availability import Availability
