@@ -26,6 +26,9 @@ class Availability(models.Model):
     if self.pk is None:
       self.period_index = __class__.compose_period_index_for(self.weekday, self.period)
 
+  def __str__(self):
+    return "{} de {}".format(self.get_weekday_display(), self.get_period_display())
+
   @staticmethod
   def compose_period_index_for(weekday, period):
     return int(weekday) * len(availability_weekdays) + int(period)

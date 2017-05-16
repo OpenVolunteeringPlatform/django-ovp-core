@@ -35,6 +35,7 @@ class LeadAdmin(admin.ModelAdmin):
 
 	def changelist_view(self, request, extra_context=None):
 		if 'action' in request.POST and request.POST['action'] == 'export_all_as_csv':
+			# Make a list with all ids to make a 'export all'
 			if not request.POST.getlist(admin.ACTION_CHECKBOX_NAME):
 				post = request.POST.copy()
 				for u in Lead.objects.all():

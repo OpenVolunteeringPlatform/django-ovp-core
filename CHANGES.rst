@@ -147,4 +147,5 @@ v1.2.5[unreleased]
 -----------
 * Fix issue with serializers overridden by old serializers code
 * Implemented Availability entity with model and serializer
-
+* Add string formating to Availability
+* Fix string formating to Availability, using get_*_display() to resolve values
