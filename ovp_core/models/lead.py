@@ -6,6 +6,7 @@ class Lead(models.Model):
   email = models.CharField(_('Email'), max_length=100)
   phone = models.CharField(_('Phone'), max_length=30, null=True, blank=True)
   country = models.CharField(_('Country'), max_length=2, null=True, blank=True)
+  date = models.DateTimeField(_('Date'), auto_now_add=True, null=True, blank=True)
 
   class Meta:
     app_label = 'ovp_core'

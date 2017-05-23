@@ -150,3 +150,4 @@ v1.2.5[unreleased]
 * Add string formating to Availability
 * Fix string formating to Availability, using get_*_display() to resolve values
 * Implemented helpers to handle xls and csv responses
+* Update pt_BR locale
