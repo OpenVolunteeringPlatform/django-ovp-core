@@ -93,7 +93,8 @@ class GoogleAddress(models.Model):
   def __str__(self):
     if self.address_line:
       return self.address_line
-    return ""
+    
+    return self.typed_address
 
 
 @receiver(post_save, sender=GoogleAddress)

@@ -42,7 +42,8 @@ class GoogleAddressModelTestCase(TestCase):
     self.assertTrue(a.lng)
 
     a.address_line=None
-    self.assertTrue(a.__str__() == "")
+    a.typed_address = 'Rua Teste'
+    self.assertTrue(a.__str__() == "Rua Teste")
 
   def test_locality(self):
     """Assert GoogleAddressModel.get_city_state preference order is locality, administrative_area_2"""
