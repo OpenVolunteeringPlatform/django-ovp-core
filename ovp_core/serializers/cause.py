@@ -1,12 +1,10 @@
 from ovp_core import models
 from ovp_core import validators
 from rest_framework import serializers
-from ovp_uploads.serializers import UploadedImageSerializer
 
 class CauseSerializer(serializers.ModelSerializer):
-	image = UploadedImageSerializer()
 	class Meta:
-		fields = ['id', 'name', 'image']
+		fields = ['id', 'name']
 		model = models.Cause
 
 class CauseAssociationSerializer(serializers.ModelSerializer):
