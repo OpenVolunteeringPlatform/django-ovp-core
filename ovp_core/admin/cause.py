@@ -9,7 +9,7 @@ class CauseInline(admin.TabularInline):
 
 
 class CauseAdmin(admin.ModelAdmin):
-	fields = ['id', 'name']
+	fields = ['id', 'name', 'image']
 
 	list_display = ['id', 'name']
 
