@@ -152,3 +152,4 @@ v1.2.5[unreleased]
 * Implemented helpers to handle xls and csv responses
 * Update pt_BR locale
 * Add image field in causes
+* Add image in causes serializer
