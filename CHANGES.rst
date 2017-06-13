@@ -153,3 +153,4 @@ v1.2.5[unreleased]
 * Update pt_BR locale
 * Add image field in causes
 * Add image in causes serializer
+* Add SimpleAddress model
