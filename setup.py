@@ -22,5 +22,6 @@ setup(
       'codecov>=2.0.5,<2.1.0',
       'coverage>=4.2,<4.3.0',
       'django-vinaigrette>=1.0.1,<1.1.0',
+      'ovp-uploads>=1.0.4,<1.1.0'
     ]
 )
