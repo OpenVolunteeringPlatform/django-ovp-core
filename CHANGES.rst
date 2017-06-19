@@ -143,7 +143,7 @@ v1.2.4
 * Fix locale setting on emails
 * Add setting to disable emails
 
-v1.2.5[unreleased]
+v1.2.5
 -----------
 * Fix issue with serializers overridden by old serializers code
 * Implemented Availability entity with model and serializer
@@ -154,3 +154,6 @@ v1.2.5[unreleased]
 * Add image field in causes
 * Add image in causes serializer
 * Add SimpleAddress model
+
+v1.2.6[unreleased]
+-----------
