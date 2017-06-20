@@ -8,3 +8,4 @@ class SimpleAddress(models.Model):
   state = models.CharField(max_length=100, null=True, blank=True)
   zipcode = models.CharField(max_length=20, null=True, blank=True)
   country = models.CharField(max_length=100, null=True, blank=True)
+  supplement = models.CharField(max_length=100, null=True, blank=True)
