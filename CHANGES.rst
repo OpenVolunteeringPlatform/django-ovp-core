@@ -157,3 +157,5 @@ v1.2.5
 
 v1.2.6[unreleased]
 -----------
+* Add SimpleAddressSerializar
+* Add ADDRESS_SERIALIZER_TUPLE setting and get_serializer_tuple helper

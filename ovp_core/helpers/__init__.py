@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.utils.translation import ugettext as _
+from ovp_core.serializers.google_address import *
 import importlib
 
 def get_settings(string="OVP_CORE"):
@@ -55,3 +56,23 @@ def get_address_model():
   """
   model_name = get_settings().get("ADDRESS_MODEL", "ovp_core.models.GoogleAddress")
   return import_from_string(model_name)
+
+
+def get_address_serializers():
+  """ Return application address serializer tuple
+
+  The tuple can be modified by setting OVP_CORE.ADDRESS_SERIALIZER_TUPLE.
+
+  Returns:
+    tuple: A tuple with 3 serializers
+
+    The default tuple returned is (GoogleAddressSerializer, GoogleAddressLatLngSerializer, GoogleAddressCityStateSerializer).
+    The first one is the default serializer, usually used to create and update addresses.
+    The second extends the first one but also includes 'lat' and 'lng' field, used to create pins on maps.
+    The third is a simplified serializer containing only field 'city_state'. This is used on search.
+
+  """
+  serializers = get_settings().get('ADDRESS_SERIALIZER_TUPLE', None)
+  if isinstance(serializers, tuple):
+    return [import_from_string(s) for s in serializers]
+  return (GoogleAddressSerializer, GoogleAddressLatLngSerializer, GoogleAddressCityStateSerializer)
