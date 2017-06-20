@@ -93,7 +93,7 @@ class GoogleAddress(models.Model):
   def __str__(self):
     if self.address_line:
       return self.address_line
-    
+
     return self.typed_address
 
 

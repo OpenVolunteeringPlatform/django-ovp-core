@@ -1,6 +1,5 @@
 from django.conf import settings
 from django.utils.translation import ugettext as _
-from ovp_core.serializers.google_address import *
 import importlib
 
 def get_settings(string="OVP_CORE"):
@@ -72,7 +71,5 @@ def get_address_serializers():
     The third is a simplified serializer containing only field 'city_state'. This is used on search.
 
   """
-  serializers = get_settings().get('ADDRESS_SERIALIZER_TUPLE', None)
-  if isinstance(serializers, tuple):
-    return [import_from_string(s) for s in serializers]
-  return (GoogleAddressSerializer, GoogleAddressLatLngSerializer, GoogleAddressCityStateSerializer)
+  serializers = get_settings().get('ADDRESS_SERIALIZER_TUPLE', ('ovp_core.models.GoogleAddressSerializer', 'ovp_core.models.GoogleAddressLatLngSerializer', 'ovp_core.models.GoogleAddressCityStateSerializer'))
+  return [import_from_string(s) for s in serializers]
