@@ -71,5 +71,5 @@ def get_address_serializers():
     The third is a simplified serializer containing only field 'city_state'. This is used on search.
 
   """
-  serializers = get_settings().get('ADDRESS_SERIALIZER_TUPLE', ('ovp_core.models.GoogleAddressSerializer', 'ovp_core.models.GoogleAddressLatLngSerializer', 'ovp_core.models.GoogleAddressCityStateSerializer'))
+  serializers = get_settings().get('ADDRESS_SERIALIZER_TUPLE', ('ovp_core.serializers.GoogleAddressSerializer', 'ovp_core.serializers.GoogleAddressLatLngSerializer', 'ovp_core.serializers.GoogleAddressCityStateSerializer'))
   return [import_from_string(s) for s in serializers]
