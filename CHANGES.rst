@@ -155,7 +155,10 @@ v1.2.5
 * Add image in causes serializer
 * Add SimpleAddress model
 
-v1.2.6[unreleased]
+v1.2.6
 -----------
 * Add SimpleAddressSerializar
 * Add ADDRESS_SERIALIZER_TUPLE setting and get_serializer_tuple helper
+
+v1.2.7[unreleased]
+-----------

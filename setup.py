@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ovp-core',
-    version='1.2.5',
+    version='1.2.6',
     author=u'Atados',
     author_email='arroyo@atados.com.br',
     packages=find_packages(),
