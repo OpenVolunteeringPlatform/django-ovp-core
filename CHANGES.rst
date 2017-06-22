@@ -160,5 +160,9 @@ v1.2.6
 * Add SimpleAddressSerializar
 * Add ADDRESS_SERIALIZER_TUPLE setting and get_serializer_tuple helper
 
-v1.2.7[unreleased]
+v1.2.7
+-----------
+* Add pyexcel to requirements
+
+v1.2.8[unreleased]
 -----------
