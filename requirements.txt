@@ -4,3 +4,4 @@ Django==1.10.5
 djangorestframework==3.5.3
 django-vinaigrette==1.0.1
 ovp-uploads==1.0.4
+pyexcel-xls==0.3.1
