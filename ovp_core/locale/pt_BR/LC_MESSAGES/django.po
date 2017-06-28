@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-28 21:40+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: django-ovp-core/ovp_core/models/availability.py:21
+msgid "Weekday"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/availability.py:22
+msgid "Day period"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/cause.py:8
+msgid "image"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/cause.py:15
+msgid "cause"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:5
+msgid "Name"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:6
+msgid "Email"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:7
+msgid "Phone"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:8
+msgid "Country"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:9
+msgid "Date"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:13
+msgid "Lead"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/lead.py:14
+msgid "Leads"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/skill.py:7
+msgid "name"
+msgstr ""
+
+#: django-ovp-core/ovp_core/models/skill.py:14
+msgid "skill"
+msgstr ""
+
+#: django-ovp-core/ovp_core/tests/runtests.py:81
+msgid "English"
+msgstr ""
+
+#: django-ovp-core/ovp_core/tests/runtests.py:82
+msgid "Portuguese"
+msgstr ""
