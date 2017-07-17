@@ -20,7 +20,7 @@ class BaseMail:
   """
   This class is responsible for firing emails
   """
-  from_email = ''
+  from_email = get_settings().get('DEFAULT_FROM_EMAIL', '')
 
   def __init__(self, email_address, async_mail=None, locale=None):
     self.email_address = email_address
