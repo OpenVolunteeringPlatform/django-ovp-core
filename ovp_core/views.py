@@ -33,8 +33,9 @@ def contact(request):
   message = request.data.get("message", "")
   email = request.data.get("email", "")
   phone = request.data.get("phone", "")
+  collaborator_code = request.data.get("collaborator_code", "")
   recipients = request.data.get("recipients", request.data.get("recipients[]", []))
-  context = {"name": name, "message": message, "email": email, "phone": phone}
+  context = {"name": name, "message": message, "email": email, "phone": phone, "collaborator_code": collaborator_code}
 
   if not type(recipients) is list:
     recipients = [recipients]
